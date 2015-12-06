@@ -2,6 +2,6 @@
 
 <div>
   <% @links.each do |link| %>
-    <%= link_to link.title, link_path(link) %> | <%= link_to '前往連結', link.url, target: '_blank' %>
+    <%= link_to link.title, link.url, target: '_blank' %> | <%= link_to '參與討論', link_path(link) %>
   <% end %>
 </div>
