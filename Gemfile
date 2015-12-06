@@ -60,6 +60,7 @@ group :development, :test do
   gem 'guard-pow'
   gem 'annotate'
   gem 'meta_request'
+  gem "shoulda-matchers"
   gem 'quiet_assets'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
