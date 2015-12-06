@@ -70,6 +70,10 @@ group :development, :test do
   gem 'slackistrano', require: false
 end
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-sweetalert'
+end
+
 gem 'mysql2'
 gem 'devise'
 gem 'active_model_serializers'
@@ -88,7 +92,7 @@ gem 'react-rails', '~> 1.0'
 gem 'sprockets-coffee-react'
 gem 'awesome_rails_console'
 gem 'growlyflash', '0.6.2'
-gem 'rails-assets-sweetalert'
+gem 'sweet-alert-confirm'
 gem 'rails-settings-cached', '0.4.1'
 gem 'settingslogic'
 gem 'cells'
