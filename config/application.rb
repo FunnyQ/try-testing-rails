@@ -27,5 +27,10 @@ module TryTestingRails
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # API Setting
+    config.paths.add File.join('app', 'apis'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'apis', '*')]
+    config.autoload_paths << "#{Rails.root}/app/uploaders"
   end
 end
