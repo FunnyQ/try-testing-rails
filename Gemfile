@@ -1,4 +1,3 @@
-source 'https://rails-assets.org'
 source 'https://rubygems.org'
 
 
@@ -58,6 +57,7 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec', require: false
   gem 'guard-pow'
+  gem 'terminal-notifier-guard'
   gem 'annotate'
   gem 'meta_request'
   gem "shoulda-matchers"
