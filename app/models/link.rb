@@ -10,4 +10,8 @@ class Link < ActiveRecord::Base
     upvotes - downvotes
   end
 
+  def self.hottest_first
+    order('upvotes - downvotes DESC')
+  end
+
 end
