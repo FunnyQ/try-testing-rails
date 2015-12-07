@@ -30,10 +30,21 @@ RSpec.describe "Api::V1::Links", type: :request do
     it '建立新的 link' do
       link_params = attributes_for(:link)
 
-      post '/api/v1/links', link: link_params
+      post '/api/v1/links', link_params
 
       expect(response.status).to eq 201
       expect(Link.last.title).to eq link_params[:title]
+    end
+
+    context '參數有誤的時候' do
+      it '回傳 422 與錯誤原因' do
+        link_params = attributes_for(:link, :invalid)
+
+        post '/api/v1/links', link_params
+
+        expect(response.status).to eq 422
+        expect(json_body.fetch('errors')).not_to be_empty
+      end
     end
   end
 end

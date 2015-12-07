@@ -269,6 +269,8 @@ zh-TW:
         link:
           attributes:
             url:
-              blank: 'URL 不能為空'
+              blank: '不能為空'
+              taken: '資料庫中已經有此連結'
             title:
               blank: '標題不能為空'
+
