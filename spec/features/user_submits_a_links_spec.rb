@@ -23,7 +23,7 @@ RSpec.feature "user submits a link", type: :feature do
       fill_in 'link_title', with: link_title
       click_on 'Submit!'
 
-      expect(page).to have_content 'URL 不能為空'
+      expect(page).to have_content '不能為空'
     end
   end
 end

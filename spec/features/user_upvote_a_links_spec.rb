@@ -10,6 +10,6 @@ RSpec.feature "使用者可以對連結按讚", type: :feature do
       click_on '讚'
     end
 
-    except(page).to have_css "link_#{link.id} [data-role='score']", text: '1'
+    expect(page).to have_css "#link_#{link.id} [data-role='score']", text: '1'
   end
 end

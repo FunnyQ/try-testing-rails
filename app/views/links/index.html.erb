@@ -2,6 +2,8 @@
 
 <div>
   <% @links.each do |link| %>
-    <%= link_to link.title, link.url, target: '_blank' %> | <%= link_to '參與討論', link_path(link) %>
+    <div id="link_<%= link.id %>">
+      <%= link_to link.title, link.url, target: '_blank' %> | <%= link_to '參與討論', link_path(link) %> | <%= link_to "讚", upvote_link_path(link), method: :post %> <span data-role="score"><%= link.score %></span>
+    </div>
   <% end %>
 </div>

@@ -1,4 +1,6 @@
 class Link < ActiveRecord::Base
+  IMAGE_FORMATS = %w(.jpg .png .gif)
+
   validates :title, presence: true
   validates :url, presence: true
   validates :url, uniqueness: true
@@ -15,4 +17,7 @@ class Link < ActiveRecord::Base
     order('upvotes - downvotes DESC')
   end
 
+  def image?
+    url.end_with? *IMAGE_FORMATS
+  end
 end
