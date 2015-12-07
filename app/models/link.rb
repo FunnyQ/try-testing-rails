@@ -6,4 +6,8 @@ class Link < ActiveRecord::Base
     increment!(:upvotes)
   end
 
+  def score
+    upvotes - downvotes
+  end
+
 end
