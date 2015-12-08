@@ -11,5 +11,10 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe LinksHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it '同時顯示分數與原始投票狀況' do
+    link = Link.new(upvotes: 7, downvotes: 2)
+    formatted_score = helper.formatted_score_for(link)
+
+    expect(formatted_score).to eq '5 (+7, -2)'
+  end
 end
