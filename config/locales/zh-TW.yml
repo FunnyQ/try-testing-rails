@@ -263,3 +263,14 @@ zh-TW:
       not_saved:
         one: 有一個錯誤導致 %{resource} 不能被儲存：
         other: 有 %{count} 個錯誤導致 %{resource} 不能被儲存：
+  activerecord:
+    errors:
+      models:
+        link:
+          attributes:
+            url:
+              blank: '不能為空'
+              taken: '資料庫中已經有此連結'
+            title:
+              blank: '標題不能為空'
+
